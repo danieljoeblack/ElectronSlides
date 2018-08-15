@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CLEAN MARKUP = GOOD KARMA.
+      Hi source code lover,
+
+      you're a curious person and a fast learner ;)
+      Let's make something beautiful together. Contribute on Github:
+      https://github.com/webslides/webslides
+
+      Thanks!
+    -->
+
+    <!-- SEO -->
+    <title>Electron.JS</title>
+    <meta name="description" content="This is a presentation tutorial for a beginner Electron.JS project.">
+    <style>
+    .bold{
+      font-weight: bold;
+      font-size: 110%
+    }
+    </style>
+    <!-- URL CANONICAL -->
+    <!-- <link rel="canonical" href="http://your-url.com/permalink"> -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" type='text/css' media='all' href="/css/webslides.css">
+
+    <!-- Optional - CSS SVG Icons (Font Awesome) -->
+    <link rel="stylesheet" type="text/css" media="all" href="/css/svg-icons.css">
+
+    <!-- SOCIAL CARDS (ADD YOUR INFO) -->
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" sizes="16x16" href="/images/favicons/favicon.png">
+    <link rel="shortcut icon" sizes="32x32" href="/images/favicons/favicon-32.png">
+    <link rel="apple-touch-icon icon" sizes="76x76" href="/images/favicons/favicon-76.png">
+    <link rel="apple-touch-icon icon" sizes="120x120" href="/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon icon" sizes="152x152" href="/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon icon" sizes="180x180" href="/images/favicons/favicon-180.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="/images/favicons/favicon-192.png">
+
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+  </head>
+  <body>    
+
+    <main role="main">
+      <article id="webslides">
+
+        <!-- Quick Guide
+          - Each parent <section> in the <article id="webslides"> element is an individual slide.
+          - Vertical sliding = <article id="webslides" class="vertical">
+          - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
+        -->
+
+        <section class="bg-black-blue aligncenter">
+         <span class="background anim" style="background-image:url('https://source.unsplash.com/n9WPPWiPPJw/')"></span>
+          <!--.wrap = container (width: 90%) with fadein animation -->
+          <div class="wrap">
+            <p class="text-subtitle">Welcome to</p>
+            <h1 class="text-landing">Electron.js</h1>
+            <p class="text-symbols">* * * </p>
+            <p>
+              <a class="button ghost" style="border:none;" href="https://electronjs.org/" title="View the Electron.js Website.">
+                <img class="icon"  src="https://www.iconspng.com/clipart/electron-by-yykmailru/electron-by-yykmailru.svg"/>
+              </a>
+            </p>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section class="aligncenter">
+          <!--.wrap = container (width: 90%) with fadein animation -->
+          <div class="wrap">
+            <h2><strong>What is Electron.js?</strong></h2>
+            <p class="text-intro">From Electron.org:</p>
+            <ul class="flexblock border">
+              <li>
+                <!--div required = padding li or li>a-->
+                <div class="aligncenter">
+                  <q>If you can build a website, you can build a desktop app. Electron is a framework for creating native applications with web technologies like JavaScript, HTML, and CSS. It takes care of the hard parts so you can focus on the core of your application.</q>
+                </div>
+              </li>              
+            </ul>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <div class="wrap">
+            <h2>Who uses it?</h2>
+            <ul class="flexblock clients">
+              <li>
+                <a href="https://www.skype.com/en/" title="Skype">
+                  <figure>
+                    <img class="aligncenter" src="/images/skype-icon.png" alt="Skype">
+                    <figcaption>
+                      <h3 class="aligncenter">Skype</h3>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="https://desktop.github.com/" title="Github Desktop">
+                  <figure>
+                    <img class="aligncenter" src="/images/github-desktop-icon.png" alt="Github Desktop">
+                    <figcaption>
+                      <h3 class="aligncenter">Github</h3>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="https://discordapp.com/" title="Discord">
+                  <figure>
+                    <img class="aligncenter" src="/images/discord-icon.png" alt="Discord">
+                    <figcaption>
+                      <h3 class="aligncenter">Discord</h3>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="https://code.visualstudio.com/" title="Visual Studio Code">
+                  <figure>
+                    <img class="aligncenter" src="/images/visual-studio-code-icon.png" alt="Visual Studio Code">
+                    <figcaption>
+                      <h3 class="aligncenter">Visual Studio Code</h3>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>              
+            </ul>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <div class="wrap size-50">
+            <h2>
+              <svg class="fa-check">
+                <use xlink:href="#fa-check"></use>
+              </svg>
+              To Do List
+            </h2>
+            <p class="text-intro">To set up a basic Electron App</p>
+            <hr>
+            <ul class="description">
+              <li class="bold">
+                <svg class="#fa-chevron-right">
+                  <use xlink:href="#fa-chevron-right"></use>
+                </svg>
+                Setup Project
+              </li>
+              <li class="bold">
+                <svg class="fa-check">
+                  <use xlink:href="#fa-chevron-right"></use>
+                </svg>
+                Install ELectron
+              </li>
+              <li class="bold">
+                <svg class="fa-check">
+                  <use xlink:href="#fa-chevron-right"></use>
+                </svg>
+                Setup index.js
+              </li>
+              <li class="bold">
+                <svg class="fa-check">
+                  <use xlink:href="#fa-chevron-right"></use>
+                </svg>
+                Setup index.html 
+              </li>
+              <li class="bold">
+                <svg class="fa-check">
+                  <use xlink:href="#fa-chevron-right"></use>
+                </svg>
+                Starting the App
+              </li>
+              <li class="bold">
+                <svg class="fa-check">
+                  <use xlink:href="#fa-chevron-right"></use>
+                </svg>
+                Build Shopping List
+              </li>
+            </ul>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+                <h3><strong>Setup the Project</strong></h3>
+                <p class="text-intro">Open up to where you want to start the project in the terminal:</p>
+                <span class="bold">Output:</span>               
+                <pre>
+$ mkdir ShoppingList
+$ cd ShoppingList
+$ npm init -y
+$ touch index.js
+$ touch index.html 
+$ ls
+</pre>                       
+          </div>
+          <div style="margin-top: 1%" class="wrap">
+              <span class="bold">Output:</span>
+<pre>
+  ShoppingList/
+  ├── package.json
+  ├── index.js
+  └── index.html
+</pre>
+</div>   
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <div class="wrap">
+              <h3><strong>Setup the Project - package.js</strong></h3>
+            <div class="grid vertical-align">
+                <div class="column">                      
+                  <span class="bold">Before:</span>               
+<pre>
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+</pre>                       
+                </div>
+                <div style="margin-top: 1%" class="column">
+                  <div  class="wrap"></div>
+                      <span class="bold">After:</span>
+<pre>
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start":"electron ."
+  },
+  "author": "",
+  "license": "ISC"
+}
+</pre>
+                  </div>
+                </div>
+              </div> 
+            <!-- .end .wrap -->
+          </div> 
+          </section>   
+          <section>
+              <!--.wrap = container (width: 90%) -->
+              <div class="wrap">
+                    <h3><strong>Installing Electron</strong></h3>
+                    <p class="text-intro">Installing Electron is very easy, open the terminal to the project directory and run:</p>            
+                    <pre>
+    $ npm install --save dev electron
+    </pre>                       
+  </div>
+              <!-- .end .wrap -->
+            </section>  
+            <section>
+                <!--.wrap = container (width: 90%) -->
+                <div class="wrap">
+                      <h3><strong>Setting up index.js</strong></h3>
+                      <p class="text-intro">Open the index.js we made earlier and add the following code:</p>            
+                      <pre>
+const {app, BrowserWindow} = require('electron')
+
+function createWindow () {
+  // Create the browser window.
+  win = new BrowserWindow({width: 800, height: 600})
+
+  // and load the index.html of the app.
+  win.loadFile('index.html')
+
+  // Open the DevTools.
+  //win.webContents.openDevTools()
+
+  //passes environment variable to view
+  process.env.title = "Shopping List"
+}
+      </pre>                       
+    </div>
+                <!-- .end .wrap -->
+              </section>    
+                <section>
+                    <!--.wrap = container (width: 90%) -->
+                    <div class="wrap">
+                          <h3><strong>Setting up index.html</strong></h3>
+                          <p class="text-intro">Open the index.html we made earlier and add the following code:</p>            
+                          <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Hello World!&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;document.write(process.env.title)&lt;/h1&gt;
+    We are using node &lt;script&gt;document.write(process.versions.node)&lt;/script&gt;,
+    Chrome &lt;script&gt;document.write(process.versions.chrome)&lt;/script&gt;,
+    and Electron &lt;script&gt;document.write(process.versions.electron)&lt;/script&gt;.
+  &lt;/body&gt;
+&lt;/html&gt;
+          </pre>                       
+        </div>
+                    <!-- .end .wrap -->
+                  </section> 
+                  <section>
+                      <!--.wrap = container (width: 90%) -->
+                      <div class="wrap">
+                            <h3><strong>Starting the Application</strong></h3>
+                            <p class="text-intro">At this point we have a working application, simply run the following command:</p>           
+                            <pre>
+$ npm start
+            </pre>                       
+                      </div>
+                      <!-- .end .wrap -->
+                    </section>     
+                    <section>
+                        <!--.wrap = container (width: 90%) -->
+                        <div class="wrap">
+                              <h3><strong>A Note on Electron Apps</strong></h3>
+                              <p class="text-intro">Electron works best with Single Page Application(SPA) designs. This means they frequently
+                                use some form of javascript framework to acheive this. In the following slides we will be using Angular to help
+                                with this.
+                              </p>                               
+                        </div>
+                        <!-- .end .wrap -->
+                      </section>      
+                      <section>
+                        <!--.wrap = container (width: 90%) -->
+                        <div class="wrap">
+                              <h3><strong>Making a Shopping list</strong></h3>
+                              <p class="text-intro">Since this application is going to follow the SPA structure, we need to change only a single file to give it some functionality. The below code uses Angular to make a simple Shopping list.
+                              </p>
+                              <pre style="font-size: 11pt">
+&lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;meta charset=&quot;UTF-8&quot;&gt;
+      &lt;title&gt;Shopping List&lt;/title&gt;
+        &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js&quot;&gt;&lt;/script&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://www.w3schools.com/w3css/4/w3.css&quot;&gt;
+        &lt;style&gt;
+            html, body, #fullheight {
+                min-height: 100% !important;
+                height: 100%;
+            }
+            #fullheight {
+                width: 100%;
+                max-width: 100% !important;
+                margin: 0 !important;
+                margin-right: 1% !important;
+                
+            }
+            .bottom{position:absolute; bottom:0;width:100%;}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;script&gt;
+            var app = angular.module(&quot;myShoppingList&quot;, []);            
+            app.filter('capitalize', function() {
+                return function(input) {
+                    return (!!input) ? input.charAt(0).toUpperCase() + input.substr(1).toLowerCase() : '';
+                }
+            });
+            app.controller(&quot;myCtrl&quot;, function($scope,$filter) {
+                $scope.title = process.env.title;
+                $scope.products = [&quot;Milk&quot;, &quot;Bread&quot;, &quot;Cheese&quot;];
+                $scope.addItem = function () {
+                    $scope.errortext = &quot;&quot;;
+                    if (!$scope.addMe) {return;}
+                    if ($scope.products.indexOf($scope.addMe) == -1) {
+                        $scope.products.push($filter('capitalize')($scope.addMe));
+                        $scope.addMe = &quot;&quot;;
+                    } else {
+                        $scope.errortext = &quot;The item is already in your shopping list.&quot;;
+                    }
+                }
+                $scope.removeItem = function (x) {
+                    $scope.errortext = &quot;&quot;;    
+                    $scope.products.splice(x, 1);
+                }
+            });
+            &lt;/script&gt;
+            
+            &lt;div id=&quot;fullheight&quot; ng-app=&quot;myShoppingList&quot; ng-cloak ng-controller=&quot;myCtrl&quot; class=&quot;w3-card-2 w3-margin&quot; style=&quot;max-width:400px;&quot;&gt;
+              &lt;header class=&quot;w3-container w3-light-grey w3-padding-16&quot;&gt;
+                &lt;h3&gt;{{title}}&lt;/h3&gt;
+              &lt;/header&gt;
+              &lt;ul class=&quot;w3-ul&quot;&gt;
+                &lt;li ng-repeat=&quot;x in products&quot; class=&quot;w3-padding-16&quot;&gt;{{x}}&lt;span ng-click=&quot;removeItem($index)&quot; style=&quot;cursor:pointer;&quot; class=&quot;w3-right w3-margin-right&quot;&gt;&times;&lt;/span&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+              &lt;div class=&quot;w3-container w3-light-grey w3-padding-16 bottom&quot;&gt;
+                &lt;div class=&quot;w3-row w3-margin-top&quot;&gt;
+                  &lt;div class=&quot;w3-col s10&quot;&gt;
+                    &lt;input placeholder=&quot;Add shopping items here&quot; ng-model=&quot;addMe&quot; class=&quot;w3-input w3-border w3-padding&quot;&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;w3-col s2&quot;&gt;
+                    &lt;button ng-click=&quot;addItem()&quot; class=&quot;w3-btn w3-padding w3-green&quot;&gt;Add&lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p class=&quot;w3-text-red&quot;&gt;{{errortext}}&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+                                            </pre>                                   
+                        </div>
+                        <!-- .end .wrap -->
+                      </section>      
+                      <section>
+                          <!--.wrap = container (width: 90%) -->
+                          <div class="wrap">
+                                <h3><strong>Final Thoughts</strong></h3>
+                                <p class="text-intro">
+                                  This is a basic Electron application to demonstrate the ease of setting up and using the framework. Electron offers much more
+                                  functionality that could allow you to make a wide range applications for all the popular OS types such as the ones previously mentioned.
+                                  if this was interesting for you, I strongly recommend you further explore the Electron framework.
+                                </p>                               
+                          </div>
+                          <!-- .end .wrap -->
+                        </section>   
+                        <section>
+                            <!--.wrap = container (width: 90%) -->
+                            <div class="wrap">
+                                  <h3><strong>References</strong></h3>
+                                  <ul>
+                                      <li>https://electronjs.org/docs/tutorial/first-app</li>
+                                      <li>https://www.w3schools.com/angular/angular_application.asp</li>
+                                      <li>https://stackoverflow.com/questions/7049875/height-100-not-working</li>
+                                      <li>https://electronjs.org/docs/api/environment-variables</li>
+                                      <li>https://github.com/webslides/webslides/</li>
+                                      <li>https://stackoverflow.com/questions/30207272/capitalize-the-first-letter-of-string-in-angularjs</li>
+                                  </ul>                              
+                            </div>
+                            <!-- .end .wrap -->
+                          </section>  
+      </article>
+    </main>
+    <!--main-->
+
+    <!-- Required -->
+    <script src="/js/webslides.js"></script>
+
+    <script>
+      window.ws = new WebSlides();
+    </script>
+
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <script defer src="/js/svg-icons.js"></script>
+
+  </body>
+</html>
